@@ -4,18 +4,15 @@ export default class Navbar extends Component {
     render() {
         return (
             <header id="home">
-                <nav>
-                    <div className="row">
-                        <a href="#">
-                            <img
-                                src="./assets/img/logo.png"
-                                alt="cuda"
-                                className="logo"
-                            />
-                        </a>
-                        <ul className="main-nav">
+            <nav>
+              <input type="checkbox" id="check" />
+              <label htmlFor="check" className="checkbtn">
+                <i className="fas fa-bars" />
+              </label>
+              
+                        <ul >
                             <li>
-                                <a className="active" href="#home">
+                                <a  href="#home">
                                     HOME
                                 </a>
                             </li>
@@ -38,42 +35,10 @@ export default class Navbar extends Component {
                                 <a href="#contact">Contact</a>
                             </li>
                         </ul>
-                        <div className="mobile-menu">
-                            <span onclick="openNav()">☰</span>
-                            <div id="myNav" className="overlay">
-                                <a
-                                    href="javascript:void(0)"
-                                    onclick="closeNav()"
-                                    className="closebtn"
-                                >
-                                    ×
-                                </a>
-                                <div className="overlay-content">
-                                    <a onclick="closeNav()" href="#home">
-                                        HOME
-                                    </a>
-                                    <a onclick="closeNav()" href="#service">
-                                        SERVICE
-                                    </a>
-                                    <a onclick="closeNav()" href="#team">
-                                        TEAM
-                                    </a>
-                                    <a onclick="closeNav()" href="#skill">
-                                        SKILL
-                                    </a>
-                                    <a onclick="closeNav()" href="#portfolio">
-                                        PORTFOLIO
-                                    </a>
-                                    <a onclick="closeNav()" href="#testimonial">
-                                        Testimonial
-                                    </a>
-                                    <a onclick="closeNav()" href="#contact">
-                                        Contact
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                    
+
+                   
                 </nav>
                 <div className="row">
                     <div className="hero-text-box">

@@ -1,5 +1,4 @@
-Basic Setup
-* {
+Basic Setup * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -115,7 +114,8 @@ h4 {
 header {
     background: -webkit-gradient(
             linear,
-            left top, left bottom,
+            left top,
+            left bottom,
             from(rgba(135, 80, 156, 0.9)),
             to(rgba(135, 80, 156, 0.9))
         ),
@@ -132,49 +132,70 @@ header {
     height: 85vh;
     position: relative;
 }
-.logo {
-    height: 3.5rem;
-    width: auto;
-    margin-top: 3.5rem;
-    float: left;
-}
+
 .hero-text-box {
     width: 114rem;
 }
 /* Main Navigation  */
-.main-nav {
+
+nav {
+    width: 100%;
+    padding: 0rem;
+    background-color: #0082e6;
+    position: sticky;
+    top: 10px;
+    z-index: 99999;
+}
+
+nav ul {
     float: right;
-    margin-top: 4rem;
+    margin-right: 2rem;
 }
-.main-nav li {
+nav ul li {
     display: inline-block;
-    margin-left: 1rem;
+    line-height: 3rem;
 }
 
-.main-nav li:first-child {
-    margin-left: 0;
+section {
+    margin: 0 0;
 }
 
-.main-nav li a:link,
-.main-nav li a:visited {
-    color: #fff;
+nav ul li a {
+    color: white;
+    font-size: 1.7rem;
+    padding: 0.7rem 1.3rem;
+    border-radius: 0.3rem;
+
     text-decoration: none;
     text-transform: uppercase;
-    background: rgba(100, 58, 121, 0);
-    padding: 0.6rem 1.6rem;
-    border-radius: 0.3rem;
-    display: inline-block;
-    font-size: 1.6rem;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
+
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
 }
-.main-nav li:hover a:link,
-.main-nav li:hover a:visited {
-    background: rgba(100, 58, 121, 1);
+
+a.active,
+a:hover {
+    background: #1b9bff;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
-.active {
-    background: rgba(100, 58, 121, 1);
-    border-radius: 0.3rem;
+.checkbtn {
+    font-size: 3rem;
+    color: white;
+    float: right;
+    line-height: 0px;
+    margin-right: 4rem;
+    cursor: pointer;
+    display: none;
+    margin-top: 2.5rem;
+}
+#check {
+    display: none;
 }
 
 /* Sticky Navigation */
@@ -184,15 +205,9 @@ header {
     left: 0;
     width: 100%;
     background: rgba(135, 80, 156, 0.9);
-    padding: 1rem 0;
+    padding: 0 0;
     box-shadow: 0 0.2rem 0.5rem rgba(255, 255, 255, 0.9);
     z-index: 9999;
-}
-.sticky .logo {
-    margin-top: 0;
-}
-.sticky .main-nav {
-    margin-top: 0.2rem;
 }
 
 .hero-text-box {
@@ -200,7 +215,7 @@ header {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 .btn-hero:link,
@@ -208,57 +223,7 @@ header {
     background: #eb7d4b;
     border-color: #c86a40;
 }
-/* Mobile Menu */
-.mobile-menu span {
-    color: #fff;
-    font-size: 4rem;
-    float: right;
-    margin-top: 2rem;
-    display: none;
-}
-.mobile-menu span {
-    cursor: pointer;
-}
-.overlay {
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1;
-    overflow-x: hidden;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-}
-.overlay-content {
-    position: relative;
-    top: 20%;
-    width: 100%;
-    text-align: center;
-}
-.overlay a {
-    text-decoration: none;
-    display: block;
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #999;
-    padding: 1rem 0;
-}
-.overlay a:hover {
-    color: #fff;
 
-}
-.overlay .closebtn{
-    position: absolute;
-    top:2rem;
-    right: 4.5rem;
-    font-size: 6rem;
-}
-.sticky .mobile-menu span{
-    margin-top: 0;
-    line-height: 1;
-}
 /* Services Section */
 
 .services-section {
@@ -266,7 +231,8 @@ header {
     text-align: center;
     background: -webkit-gradient(
             linear,
-            left top, left bottom,
+            left top,
+            left bottom,
             from(rgba(23, 194, 164, 0.9)),
             to(rgba(23, 194, 164, 0.9))
         ),
@@ -294,7 +260,8 @@ header {
     text-align: center;
     background: -webkit-gradient(
             linear,
-            left top, left bottom,
+            left top,
+            left bottom,
             from(rgba(231, 241, 248, 0.9)),
             to(rgba(231, 241, 248, 0.9))
         ),
@@ -359,7 +326,7 @@ header {
 .social-link ul li a:hover i:before {
     background: #393939;
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
 }
 .social-link,
 .fa,
@@ -374,7 +341,8 @@ header {
     text-align: center;
     background: -webkit-gradient(
             linear,
-            left top, left bottom,
+            left top,
+            left bottom,
             from(rgba(255, 255, 255, 0.9)),
             to(rgba(255, 255, 255, 0.9))
         ),
@@ -421,7 +389,8 @@ svg.ui-ux circle {
 .portfolio-section {
     background: -webkit-gradient(
             linear,
-            left top, left bottom,
+            left top,
+            left bottom,
             from(rgba(255, 221, 153, 0.9)),
             to(rgba(255, 221, 153, 0.9))
         ),
@@ -482,7 +451,8 @@ svg.ui-ux circle {
 .testimonial {
     background: -webkit-gradient(
             linear,
-            left top, left bottom,
+            left top,
+            left bottom,
             from(rgba(215, 70, 128, 0.9)),
             to(rgba(215, 70, 128, 0.9))
         ),
@@ -538,7 +508,13 @@ client-review q {
 /* Contact Section */
 .contact-section {
     text-align: center;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(60, 84, 153, 0.9)), to(rgba(60, 84, 153, 0.9))),
+    background: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(rgba(60, 84, 153, 0.9)),
+            to(rgba(60, 84, 153, 0.9))
+        ),
         url(./img/contact-bg.jpg);
     background: linear-gradient(rgba(60, 84, 153, 0.9), rgba(60, 84, 153, 0.9)),
         url(./img/contact-bg.jpg);
@@ -553,8 +529,6 @@ client-review q {
 .contact-section form {
     margin-top: 5rem;
     width: 90%;
-    
-  
 }
 .contact-section input[type="text"],
 .contact-section input[type="email"],

@@ -11,18 +11,10 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .mobile-menu span{
-    display: block;
-    }
-    
     header {
-        height: 55vh;
+        height: 35vh;
     }
-   
-  
-    .main-nav {
-        display: none;
-    }
+
     html {
         font-size: 57.5%;
     }
@@ -53,10 +45,10 @@
     }
 }
 @media only screen and (max-width: 768px) {
-    header{
+    header {
         height: 45vh;
     }
-    
+
     .little-description {
         width: 100%;
         margin-left: 0;
@@ -72,7 +64,7 @@
     }
 }
 @media only screen and (max-width: 480px) {
-    header{
+    header {
         height: 75vh;
     }
     .span_1_of_4 {
@@ -88,7 +80,44 @@
         font-size: 2rem;
     }
     .testimonial .col:nth-child(3),
-.testimonial .col:nth-child(4) {
-    margin-top: 4rem;
+    .testimonial .col:nth-child(4) {
+        margin-top: 4rem;
+    }
 }
+
+@media (max-width: 769px) {
+    .checkbtn {
+        display: block;
+    }
+    nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #2c3e50;
+        top: 4rem;
+        left: -111%;
+        text-align: center;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        z-index: 9999999999;
+    }
+    nav ul li {
+        display: block;
+        margin: 1rem 0;
+        line-height: 3rem;
+    }
+    nav ul li a {
+        font-size: 2rem;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
 }
